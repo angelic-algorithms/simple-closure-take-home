@@ -7,7 +7,7 @@ export default function MovieCard({ movie }) {
     : null
 
   return (
-    <div className="movie-card">
+    <article className="movie-card" tabIndex={0}>
       <div className="movie-card__poster-wrap">
         {posterUrl ? (
           <img className="movie-card__poster" src={posterUrl} alt={`${movie.title} poster`} loading="lazy" />
@@ -19,13 +19,13 @@ export default function MovieCard({ movie }) {
           <p>{movie.overview ? movie.overview : 'No description available.'}</p>
         </div>
 
-        <span className="movie-card__rating">★ {movie.vote_average.toFixed(1)}</span>
+        <span className="movie-card__rating">{movie.vote_average.toFixed(1)}</span>
       </div>
 
       <div className="movie-card__body">
         <h3 className="movie-card__title">{movie.title}</h3>
         <span className="movie-card__year">{year}</span>
       </div>
-    </div>
+    </article>
   )
 }
