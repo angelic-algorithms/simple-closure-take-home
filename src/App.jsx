@@ -46,13 +46,12 @@ export default function App() {
   return (
     <div className="app">
       <header className="nav">
-        <p className="nav__meta">Discover</p>
+        <p className="nav__meta">TMDB</p>
         <a className="brand" href="/">
           <BrandMark />
           <span>Movie Discover</span>
         </a>
         <div className="nav__actions">
-          <span className="nav__quiet">TMDB</span>
           <a className="btn btn--primary" href="#movies">
             Browse films
           </a>
