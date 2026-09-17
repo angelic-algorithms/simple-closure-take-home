@@ -286,13 +286,32 @@ main {
 
 .movie-card__overlay p {
   margin: 0;
+  max-height: 100%;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding-right: 0.4rem;
   font-size: 0.86rem;
   line-height: 1.35;
   color: #f4f0e8;
-  display: -webkit-box;
-  -webkit-line-clamp: 7;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(244, 240, 232, 0.5) transparent;
+}
+
+.movie-card__overlay p::-webkit-scrollbar {
+  width: 5px;
+}
+
+.movie-card__overlay p::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.movie-card__overlay p::-webkit-scrollbar-thumb {
+  background-color: rgba(244, 240, 232, 0.4);
+  border-radius: 999px;
+}
+
+.movie-card__overlay p::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(244, 240, 232, 0.7);
 }
 
 .movie-card__body {
