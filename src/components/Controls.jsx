@@ -1,7 +1,6 @@
 const SORT_OPTIONS = [
   { value: 'title.asc', label: 'Title (A–Z)' },
   { value: 'vote_average.desc', label: 'Rating (High to Low)' },
-  { value: 'popularity.desc', label: 'Popularity (High to Low)' },
   { value: 'primary_release_date.desc', label: 'Release Date (Newest)' },
 ]
 

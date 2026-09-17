@@ -17,7 +17,7 @@ No environment variables or config are required — the TMDB API key ships in `s
 
 - Fetches movies from `GET /discover/movie` (first page).
 - **Filter:** by genre, via a dropdown populated from `GET /genre/movie/list`. Selecting a genre re-fetches with `with_genres`.
-- **Sort:** defaults to alphabetical (`sort_by=title.asc`); a second dropdown lets you switch to rating, popularity, or release date, which also re-fetches from the API (TMDB does the sorting server-side, not the client).
+- **Sort:** defaults to alphabetical (`sort_by=title.asc`); a second dropdown lets you switch to rating or release date, which also re-fetches from the API (TMDB does the sorting server-side, not the client). Popularity is intentionally not offered as a sort — the card doesn't display a popularity metric, so sorting by it would give no visible confirmation the order actually changed.
 - Every request also sends `vote_count.gte=100` — without it, alphabetical/rating sorts surface obscure titles with only a handful of votes. This keeps results to movies with a meaningful amount of ratings data.
 - Each card shows: poster, title, release year, a rating badge, and a hover overlay that reveals the movie's overview (synopsis).
 - The grid is responsive (CSS Grid `auto-fill`/`minmax`), and card hover/overlay transitions are done in pure CSS.
